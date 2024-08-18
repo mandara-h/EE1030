@@ -1,0 +1,263 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{10/A/C/5-19}
+\author{EE24BTECH11040 - Mandara Hosur}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\textbf{C. MCQs with One Correct Answer}}
+
+\begin{enumerate}
+
+\item If $f\brak{x} = \cos{\brak{\ln{x}}}$, then $$f\brak{x}f\brak{y}-\frac{1}{2} \sbrak{f\brak{\frac{x}{y}}+f\brak{xy}}$$ has the value
+
+\hfill{\brak{1983 - 1 Mark}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item -1 
+		\item $\frac{1}{2}$
+		\item -2 
+		\item none of these
+	\end{enumerate}
+\end{multicols}
+
+\item The domain of definition of the function
+$y = \frac{1}{\log_{10}{\brak{1-x}}} + \sqrt{x+2}$ is
+
+\hfill{\brak{1983 - 1 Mark}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item \brak{-3, -2} excluding -2.5 
+		\item $\sbrak{0, 1}$ excluding 0.5
+		\item $\left[-2, 1\right)$ excluding 0 
+		\item none of these
+	\end{enumerate}
+\end{multicols}
+
+\item Which of the following functions is periodic?
+
+\hfill{\brak{1983 - 1 Mark}}
+
+\begin{enumerate}
+\item $f\brak{x}=x-\sbrak{x}$ where $\sbrak{x}$ denotes the largest integer less than or equal to the real number $x$
+\item $f\brak{x}=\sin{\frac{1}{x}}$ for $x\neq0$, $f\brak{0}=0$
+\item $f\brak{x}=x\cos{x}$
+\item none of these
+\end{enumerate}
+
+\item Let $f\brak{x}=\sin{x}$ and $g\brak{x}=\ln{|x|}$. If the ranges of the composition functions $fog$ and $gof$ are $R_1$ and $R_2$ respectively, then 
+
+\hfill{\brak{1994 - 2 Marks}}
+
+\begin{enumerate}
+\item $R_1=\cbrak{u:-1\le u<1}$, $R_2=\cbrak{v:-\infty<v<0}$
+\item $R_1=\cbrak{u:-\infty<u<0}$, $R_2=\cbrak{v:-1\le v\le0}$
+\item $R_1=\cbrak{u:-1<u<1}$, $R_2=\cbrak{v:-\infty<v<0}$
+\item $R_1=\cbrak{u:-1\le u\le1}$, $R_2=\cbrak{v:-\infty<v\le0}$
+\end{enumerate}
+
+\item Let $f\brak{x}=\brak{x+1}^{2}-1$, $x\ge-1$. Then the set $\cbrak{x:f\brak{x}=f^{-1}\brak{x}}$ is
+
+\hfill{\brak{1995}}
+
+\begin{enumerate}
+\item $\cbrak{0, -1, \frac{-3+i\sqrt{3}}{2}, \frac{-3-i\sqrt{3}}{2}}$
+\item \cbrak{0, 1, -1}
+\item \cbrak{0, -1}
+\item empty
+\end{enumerate}
+
+\item The function $f\brak{x}=|px-q|+r|x|$, $x\in\brak{-\infty,\infty}$ where $p>0$, $q>0$, $r>0$ assumes its minimum value only on one point if
+
+\hfill{\brak{1995}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $p\neq q$
+		\item $r\neq q$
+		\item $r\neq p$ 
+		\item $p=q=r$
+	\end{enumerate}
+\end{multicols}
+
+\item Let $f{x}$ be defined for all $x>0$ and be continuous. Let $f{x}$ satisfy $f\brak{\frac{x}{y}}=f\brak{x}-f\brak{y}$ for all $x$, $y$ and $f\brak{e}=1$. Then
+
+\hfill{\brak{1995S}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $f\brak{x}$ is bounded 
+		\item $f\brak{\frac{1}{x}}\to0$ as $x\to0$
+		\item $xf\brak{x}\to1$ as $x\to0$ 
+		\item $f\brak{x}=\ln{x}$
+	\end{enumerate}
+\end{multicols}
+
+\item If the function $f:[1,\infty)\to[1,\infty)$ is defined by $f\brak{x}=2^{x\brak{x-1}}$, then $f^{-1}\brak{x}$ is
+
+\hfill{\brak{1999 - 2 Marks}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $\brak{\frac{1}{2}}^{x\brak{x-1}}$ 
+		\item $\frac{1}{2}\brak{1+\sqrt{1+4\log_{2}{x}}}$
+		\item $\frac{1}{2}\brak{1-\sqrt{1+4\log_{2}{x}}}$ 
+		\item not defined
+	\end{enumerate}
+\end{multicols}
+
+\item Let $f:R\to R$ be any function. Define $g:R\to R$ by $g\brak{x}=|f\brak{x}|$ for all $x$. Then $g$ is
+
+\hfill{\brak{2000S}}
+
+\begin{enumerate}
+\item onto if $f$ is onto
+\item one-one if $f$ is one-one
+\item continuous if $f$ is continuous
+\item differentiable if $f$ is differentiable
+\end{enumerate}
+
+\item The domain of definition of the function $f\brak{x}$ given by the equation $2^{x}+2^{y}=2$ is
+
+\hfill{\brak{2000S}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $0<x\le1$ 
+		\item $0\le x\le1$
+		\item $-\infty<x\le0$ 
+		\item $-\infty<x<1$
+	\end{enumerate}
+\end{multicols}
+
+\item Let $g\brak{x}=1+x-\sbrak{x}$ and
+\begin{equation*}
+f\brak{x}=
+\begin{cases}
+-1, & \text{$x<0$} \\
+0, & \text{$x=0$.} \\
+1, & \text{$x>0$}
+\end{cases}
+\end{equation*}
+Then for all $x$, $f\brak{g\brak{x}}$ is equal to
+
+\hfill{\brak{2001S}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $x$ 
+		\item 1
+		\item $f\brak{x}$ 
+		\item $g\brak{x}$
+	\end{enumerate}
+\end{multicols}
+
+\item If $f:[1,\infty)\to[2,\infty)$ is given by $f\brak{x}=x+\frac{1}{x}$ then $f^{-1}\brak{x}$ equals
+
+\hfill{\brak{2001S}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $\frac{\brak{x+\sqrt{x^{2}-4}}}{2}$ 
+		\item $\frac{x}{\brak{1+x^{2}}}$
+		\item $\frac{\brak{x-\sqrt{x^{2}-4}}}{2}$ 
+		\item $1+\sqrt{x^{2}-4}$
+	\end{enumerate}
+\end{multicols}
+
+\item The domain of definition of $f\brak{x}=\frac{\log_{2}{\brak{x+3}}}{x^{2}+3x+2}$ is
+
+\hfill{\brak{2001S}}
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $R \backslash \cbrak{-1,-2}$ 
+		\item $\brak{-2,\infty}$
+		\item $R \backslash \cbrak{-1,-2,-3}$ 
+		\item $\brak{-3,\infty}\backslash\cbrak{-1,-2}$
+	\end{enumerate}
+\end{multicols}
+                                                                                        
+\item Let $E=\cbrak{1,2,3,4}$ and $F=\cbrak{1,2}$. Then the number of onto functions from E to F is
+
+\hfill{\brak{2001S}}
+
+\begin{multicols}{4}
+	\begin{enumerate}
+		\item 14 
+		\item 16 
+		\item 12 
+		\item 8
+	\end{enumerate}
+\end{multicols}
+
+\item Let $f\brak{x}=\frac{\alpha x}{x+1}$, $x\neq-1$. Then, for what value of $\alpha$ is $f\brak{\brak{x}}=x$?
+
+\hfill{\brak{2001S}}
+
+\begin{multicols}{4}
+	\begin{enumerate}
+		\item $\sqrt{2}$ 
+		\item $-\sqrt{2}$ 
+		\item 1 
+		\item -1
+	\end{enumerate}
+\end{multicols}
+
+\end{enumerate}
+
+\end{document}
