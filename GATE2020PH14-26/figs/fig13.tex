@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    % Rectangle
+    \draw[fill=gray] (-2,0) rectangle (0,1);
+    \draw (0,0) rectangle (2,1);
+
+    % Plug
+    \draw[fill=black] (-0.5,0.5) -- (0,0.75) -- (0.5,0.75) -- (0.5,0.25) -- (0,0.25) -- cycle;
+    \node[above] at (1,0.25) {Plug};
+
+    % Labels
+    \node[below] at (-1,0) {A};
+    \node[below] at (1,0) {B};
+\end{tikzpicture}

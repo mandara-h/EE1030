@@ -1,0 +1,193 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE (2020) PH(14-26)}
+\author{EE24BTECH11040 - Mandara Hosur}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\textbf{Each of the following questions carry one mark each}}
+
+\begin{enumerate}
+
+\item Let $\hat{a}$ and $\hat{a}^\dagger$, respectively denote the lowering and raising operators of a one-dimensional simple harmonic oscillator. Let $|n\rangle$ be the energy eigenstate of the simple harmonic oscillator. Given that $|n\rangle$ is also an eigenstate of $\hat{a}^\dagger\hat{a}^\dagger\hat{a}\hat{a}$, the corresponding eigenvalue is
+
+\begin{enumerate}
+\item $n(n-1)$
+\item $n(n+1)$
+\item $(n+1)^2$
+\item $n^2$
+\end{enumerate}
+
+\item Which one of the following is a universal logic gate?
+
+\begin{enumerate}
+\item AND
+\item NOT
+\item OR
+\item NAND
+\end{enumerate}
+
+\item Which one of the following is the correct binary equivalent of the hexadecimal F6C?
+
+\begin{enumerate}
+\item 0110 1111 1100
+\item 1111 0110 1100
+\item 1100 0110 1111
+\item 0110 1100 0111
+\end{enumerate}
+
+\item The total angular momentum $j$ of the ground state of the ${}^{17}_{8}O$ nucleus is
+
+\begin{enumerate}
+\item $\frac{1}{2}$
+\item $1$
+\item $\frac{3}{2}$
+\item $\frac{5}{2}$
+\end{enumerate}
+
+\item A particle $X$ is produced in the process $\pi^{+}+p\rightarrow K^{+}+X$ via the strong interaction. If the quark content of the $K^{+}$ is $u\bar{s}$, the quark content of $X$ is 
+
+\begin{enumerate}
+\item $c\bar{s}$
+\item $uud$
+\item $uus$
+\item $u\bar{d}$
+\end{enumerate}
+
+\item A medium ($\varepsilon_{r}>1$, $\mu_{r}=1$, $\sigma>0$) is semi-transparent to an electromagnetic wave when
+
+\begin{enumerate}
+\item Conduction current $>>$ Displacement current
+\item Conduction current $<<$ Displacement current
+\item Conduction current $=$ Displacement current
+\item Both Conduction current and Displacement current are zero
+\end{enumerate}
+
+\item A particle is moving in a central force field given by $\vec{F}=-\frac{k}{r^3}\vec{\hat{r}}$ where $\vec{\hat{r}}$ is the unit vector pointing away from the center of the field. The potential energy of the particle is given by
+
+\begin{enumerate}
+\item $\frac{k}{r^2}$
+\item $\frac{k}{2r^2}$
+\item $-\frac{k}{r^2}$
+\item $-\frac{k}{2r^2}$
+\end{enumerate}
+
+\item Choose the correct statement related to the Fermi energy ($E_F$) and the chemical potential ($\mu$) of a metal.
+
+\begin{enumerate}
+\item $\mu=E_F$ only at $0$ K
+\item $\mu=E_F$ at finite temperature
+\item $\mu<E_F$ at $0$ K
+\item $\mu>E_F$ at finite temperature
+\end{enumerate}
+
+\item Consider a diatomic molecule formed by identical atoms. If $E_V$ and $E_e$ represent the energy of the vibrational nuclear motion and electronic motion respectively, then in terms of the electronic mass $m$ and nuclear mass $M$, $\frac{E_V}{E_e}$ is proportional to
+
+\begin{enumerate}
+\item $\brak{\frac{m}{M}}^{\frac{1}{2}}$
+\item $\frac{m}{M}$
+\item $\brak{\frac{m}{M}}^{\frac{3}{2}}$
+\item $\brak{\frac{m}{M}}^2$
+\end{enumerate}
+
+\item Which one of the following relations determines the manner in which the electric field lines are refracted across the interface between two dielectric media having dielectric constants $\varepsilon_1$ and $\varepsilon_2$ (see figure)?
+
+\input{figs/fig10}
+
+\begin{enumerate}
+\item $\varepsilon_1\sin{\theta_1}=\varepsilon_2\sin{\theta_2}$
+\item $\varepsilon_1\cos{\theta_1}=\varepsilon_2\cos{\theta_2}$
+\item $\varepsilon_1\tan{\theta_1}=\varepsilon_2\tan{\theta_2}$
+\item $\varepsilon_1\cot{\theta_1}=\varepsilon_2\cot{\theta_2}$
+\end{enumerate}
+
+\item If $\vec{E}$ and $\vec{B}$ are the electric and magnetic fields respectively, then $\vec{E}\cdot\vec{B}$ is
+
+\begin{enumerate}
+\item odd under parity and even under time reversal
+\item even under parity and odd under time reversal
+\item odd under parity and odd under time reversal
+\item even under parity and even under time reversal
+\end{enumerate}
+
+\item A small disc is suspended by a fiber such that it is free to rotate about the fiber axis (see figure). For small angular deflections, the Hamiltonian for the disc is given by $$H=\frac{p^2_\theta}{2I}+\frac{1}{2}\alpha\theta^2$$ where $I$ is the moment of inertia and $\alpha$ is the restoring torque per unit deflection. The disc is subjected to angular deflections ($\theta$) due to thermal collisions from the surrounding gas at temperature $T$ and $p_\theta$ is the momentum conjugate to $\theta$. The average and the root-mean-square angular deflection, $\theta_{avg}$ and $\theta_{rms}$, respectively are
+
+\vspace{0.5 cm}
+
+\input{figs/fig12}
+
+\begin{enumerate}
+\item $\theta_{avg}=0$ and $\theta_{rms}=\brak{\frac{k_BT}{\alpha}}^{\frac{3}{2}}$
+\item $\theta_{avg}=0$ and $\theta_{rms}=\brak{\frac{k_BT}{\alpha}}^{\frac{1}{2}}$
+\item $\theta_{avg}\neq0$ and $\theta_{rms}=\brak{\frac{k_BT}{\alpha}}^{\frac{1}{2}}$
+\item $\theta_{avg}\neq0$ and $\theta_{rms}=\brak{\frac{k_BT}{\alpha}}^{\frac{3}{2}}$
+\end{enumerate}
+
+\item As shown in the figure, an ideal gas is confined to chamber A of an insulated container, with vacuum in chamber B. When the plug in the wall separating the chambers A and B is removed, the gas fills both the chambers. Which one of the following statements is true?
+
+\input{figs/fig13}
+
+\begin{enumerate}
+\item The temperature of the gas remains unchanged
+\item Internal energy of the gas decreases
+\item Temperature of the gas decreases as it expands to fill the space in chamber B
+\item Internal energy of the gas increases as its atoms have more space to move around
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
