@@ -1,0 +1,214 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE (2021) PH(40-52)}
+\author{EE24BTECH11040 - Mandara Hosur}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\textbf{Multiple Choice Question (MCQ), carry TWO mark each (for each wrong answer: $-\frac{2}{3}$)}}
+
+\begin{enumerate}
+
+\item Consider a point charge $+Q$ of mass $m$ suspended by a massless, inextensible string of length $l$ in free space (permittivity $\varepsilon_0$) as shown in the figure. It is placed at a height $d$ $(d>l)$ over an infinitely large, grounded conducting plane. The gravitational potential energy is assumed to be zero at the position of the conducting plane and is positive above the plane.
+
+\vspace{0.5 cm}
+
+\input{figs/question1}
+
+If $\theta$ represents the angular position and $p_\theta$ its corresponding canonical momentum, then the correct Hamiltonian of the system is
+
+\begin{enumerate}
+\item $\frac{p^2_\theta}{2ml^2}-\frac{Q^2}{16\pi\varepsilon_0(d-l\cos{\theta})}-mg(d-l\cos{\theta})$
+\item $\frac{p^2_\theta}{2ml^2}-\frac{Q^2}{8\pi\varepsilon_0(d-l\cos{\theta})}+mg(d-l\cos{\theta})$
+\item $\frac{p^2_\theta}{2ml^2}-\frac{Q^2}{8\pi\varepsilon_0(d-l\cos{\theta})}-mg(d-l\cos{\theta})$
+\item $\frac{p^2_\theta}{2ml^2}-\frac{Q^2}{16\pi\varepsilon_0(d-l\cos{\theta})}+mg(d-l\cos{\theta})$
+\end{enumerate}
+
+\item Consider two concentric conducting spherical shells as shown in the figure. The inner shell has a radius $a$ and carries a charge $+Q$. The outer shell has a radius $b$ and carries a charge $-Q$. The empty space between them is half-filled by a hemispherical shell of a dielectric having permittivity $\varepsilon_1$. The remaining space between the shells is filled with air having the permittivity $\varepsilon_0$.
+
+\input{figs/question2}
+
+The electric field at a radial distance $r$ from the center and between the shells $(a<r<b)$ is
+
+\begin{enumerate}
+\item $\frac{Q}{2\pi(\varepsilon_0+\varepsilon_1)}\frac{\hat{r}}{r^2}$ everywhere
+\item $\frac{Q}{4\pi\varepsilon_0}\frac{\hat{r}}{r^2}$ on the air side and $\frac{Q}{4\pi\varepsilon_1}\frac{\hat{r}}{r^2}$ on the dielectric side
+\item $\frac{Q}{2\pi\varepsilon_0}\frac{\hat{r}}{r^2}$ on the air side and $\frac{Q}{2\pi\varepsilon_1}\frac{\hat{r}}{r^2}$ on the dielectric side
+\item $\frac{Q}{4\pi(\varepsilon_0+\varepsilon_1)}\frac{\hat{r}}{r^2}$ everywhere
+\end{enumerate}
+
+\vspace{1 cm}
+
+\item For the given sets of energy levels of nuclei X and Y whose mass numbers are odd and even, respectively, choose the best suited interpretation. 
+
+\input{figs/question3}
+
+\begin{enumerate}
+\item Set I: Rotational band of X \\ Set II: Vibrational band of Y
+\item Set I: Rotational band of Y \\ Set II: Vibrational band of X
+\item Set I: Vibrational band of X \\ Set II: Rotational band of Y
+\item Set I: Vibrational band of Y \\ Set II: Rotational band of X
+\end{enumerate}
+
+\item Consider a system of three distinguishable particles, each having spin $S=\frac{1}{2}$ such that $S_z=\pm\frac{1}{2}$ with corresponding magnetic moments $\mu_z=\pm\mu$.When the system is placed in an external magnetic field $H$ pointing along the z-axis, the total energy of the system is $\mu H$. Let $x$ be the state where the first spin has $S_z=\frac{1}{2}$. The probability of having the state $x$ and the mean magnetic moment (in the $+z$ direction) of the system in state $x$ are
+
+\begin{enumerate}
+\item $\frac{1}{3}$, $-\frac{1}{3}\mu$
+\item $\frac{1}{3}$, $\frac{2}{3}\mu$
+\item $\frac{2}{3}$, $-\frac{2}{3}\mu$
+\item $\frac{2}{3}$, $\frac{1}{3}\mu$
+\end{enumerate}
+
+\item Consider a particle in a one-dimensional infinite potential well with its walls at $x=0$ and $x=L$. The system is perturbed as shown in the figure.
+
+\input{figs/question5}
+
+The first order correction to the energy eigenvalue is
+
+\begin{enumerate}
+\item $\frac{V_0}{4}$
+\item $\frac{V_0}{3}$
+\item $\frac{V_0}{2}$
+\item $\frac{V_0}{5}$
+\end{enumerate}
+
+\item Consider a state described by $\psi(x,t)=\psi_2(x,t)+\psi_4(x,t)$, where $\psi_2(x,t)$ and $\psi_4(x,t)$ are respectively the second and fourth normalized harmonic oscillator wave functions and $\omega$ is the angular frequency of the harmonic oscillator. The wave function $\psi(x,t=0)$ will be orthogonal to $\psi(x,t)$ at time $t$ equal to
+
+\begin{enumerate}
+\item $\frac{\pi}{2\omega}$
+\item $\frac{\pi}{\omega}$
+\item $\frac{\pi}{4\omega}$
+\item $\frac{\pi}{6\omega}$
+\end{enumerate}
+
+\item Consider a single one-dimensional harmonic oscillator of angular frequency $\omega$, in  equilibrium at temperature $T=(k_B\beta)^{-1}$. The states of the harmonic oscillator are all non-degenerate having energy $E_n=\brak{n+\frac{1}{2}}\bar{h}\omega$ with equal probability, where $n$ is the quantum number. The Helmholtz free energy of the oscillator is
+
+\begin{enumerate}
+\item $\frac{\bar{h}\omega}{2}+\beta^{-1}\ln{\sbrak{1-e^{\beta\bar{h}\omega}}}$
+\item $\frac{\bar{h}\omega}{2}+\beta^{-1}\ln{\sbrak{1-e^{-\beta\bar{h}\omega}}}$
+\item $\frac{\bar{h}\omega}{2}+\beta^{-1}\ln{\sbrak{1+e^{-\beta\bar{h}\omega}}}$
+\item $\beta^{-1}\ln{\sbrak{1-e^{-\beta\bar{h}\omega}}}$
+\end{enumerate}
+
+\item A system of two atoms can be in three quantum states having energies $0$, $\epsilon$ and $2\epsilon$. The system is in equilibrium at temperature $T=(k_B\beta)^{-1}$. Match the following Statistics with the Partition function.
+
+\vspace{1 cm}
+
+\begin{table}[h!]    
+  \centering
+  \input{tables/question8.tex}
+\end{table} 
+
+\begin{enumerate}
+\item CD:Z1, CI:Z2, FD:Z3, BE:Z4
+\item CD:Z2, CI:Z3, FD:Z4, BE:Z1
+\item CD:Z3, CI:Z4, FD:Z1, BE:Z2
+\item CD:Z4, CI:Z1, FD:Z2, BE:Z3
+\end{enumerate}
+
+\item The free energy of a ferromagnet is given by $F=F_0+a_0(T-T_C)M^2+bM^4$, where $F_0$, $a_0$, and $b$ are positive constants, $M$ is magnetization, $T$ is the temperature, and $T_C$ is the Curie temperature. The relation between $M^2$ and $T$ is best depicted by
+
+\begin{enumerate}
+\item \input{figs/question9a}
+\item \input{figs/question9b}
+\item \input{figs/question9c}
+\item \input{figs/question9d}
+\end{enumerate}
+
+\item Consider a spherical galaxy of total mass $M$ and radius $R$, having a uniform matter distribution. In this idealized situation, the orbital speed $v$ of a star of mass $m$ $(m<<M)$ as a function of the distance $r$ from the galactic center is best described by \\ (G is the universal gravitational constant)
+
+\begin{enumerate}
+\item \input{figs/question10a}
+\item \input{figs/question10b}
+\item \input{figs/question10c}
+\item \input{figs/question10d}
+\end{enumerate}
+
+\item Consider the potential $U(r)$ defined as $$U(r)=-U_0\frac{e^{-\alpha r}}{r}$$ where $\alpha$ and $U_0$ are real constants of appropriate dimensions. According to the first Born approximation, the elastic scattering amplitude calculated with $U(r)$ for a (wave-vector) momentum transfer $q$ and $\alpha\rightarrow0$, is proportional to \\ (Useful integral: $\int_0^\infty \sin{(qr)}e^{-\alpha r} dr=\frac{q}{\alpha^2+q^2}$)
+
+\begin{enumerate}
+\item $q^{-2}$
+\item $q^{-1}$
+\item $q$
+\item $q^2$
+\end{enumerate}
+
+\item As shown in the figure, inverse magnetic susceptibility ($\frac{1}{\chi}$) is plotted as a function of temperature ($T$) for three different materials in paramagnetic states.
+
+\input{figs/question12}
+
+(Curie temperature of ferromagnetic material $=T_C$ \\ N\'eel temperature of antiferromagnetic material $=T_N$) \\ Choose the correct statement from the following
+
+\begin{enumerate}
+\item Material 1 is antiferromagnetic ($T<T_N$), 2 is paramagnetic, and 3 is ferromagnetic ($T<T_C$).
+\item Material 1 is paramagnetic, 2 is antiferromagnetic ($T<T_N$), and 3 is ferromagnetic ($T<T_C$).
+\item Material 1 is ferromagnetic ($T<T_C$), 2 is antiferromagnetic ($T<T_N$), and 3 is paramagnetic.
+\item Material 1 is ferromagnetic ($T<T_c$), 2 is paramagnetic, and 3 is antiferromagnetic ($T<T_N$).
+\end{enumerate}
+
+\item A function $f(t)$ is defined only for $t\geq0$. The Laplace transform of $f(t)$ is $$\mathcal{L}(f;s)=\int_0^\infty e^{-st}f(t) dt$$ whereas the Fourier transform of $f(t)$ is $$\tilde{f}(\omega)=\int_0^\infty f(t)e^{-i\omega t}dt$$ The correct statement(s) is (are)
+
+\begin{enumerate}
+\item The variable $s$ is always real.
+\item The variable $s$ can be complex.
+\item $\mathcal{L}(f;s)=\int_0^\infty e^{-st}f(t) dt$ and $\tilde{f}(\omega)=\int_0^\infty f(t)e^{-i\omega t}dt$ can never be made connected.
+\item $\mathcal{L}(f;s)=\int_0^\infty e^{-st}f(t) dt$ and $\tilde{f}(\omega)=\int_0^\infty f(t)e^{-i\omega t}dt$ can be made connected.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
