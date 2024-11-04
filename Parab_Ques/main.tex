@@ -1,0 +1,105 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Parabola Question}
+\author{EE24BTECH11040 - Mandara Hosur}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question:}\\
+Given that the length of the major axis of a conic is 16 units and the coordinates of the foci are $\brak{0,\pm6}$, find the equation of the conic.
+\\ \\
+\textbf{Solution:} \\
+2 foci exist for this conic. Therefore, it must be an ellipse or a hyperbola.
+\\
+The general equation of a conic with directrix $\vec{n}^\top\vec{x}=c$ can be written as $$g(\vec{x}) = \vec{x}^\top\vec{V}\vec{x}+2\vec{u}^\top\vec{x}+f$$ 
+Let focus $\vec{F_1}$ be $(0,6)$ and focus $\vec{F_2}$ be $(0,-6)$
+\\
+$\vec{u} =\frac{\vec{F_1}+\vec{F_2}}{2}=\myvec{0\\0}$ and $\vec{n}\equiv\vec{F_1}-\vec{F_2}\equiv\myvec{0\\1}$
+\\
+Given that $e$ represents eccentricity of the conic, $\vec{V} = \myvec{1&0\\0&1-e^2}$
+\\
+Length of major axis = $16 = 2\sqrt{\frac{|f|}{|1-e^2|}}$
+\\
+Rearranging this equation gives 
+\begin{align}
+8\sqrt{|1-e^2|}=\sqrt{|f|}
+\end{align}
+
+Now, $\vec{F}=\frac{ce^2\vec{n}-\vec{u}}{\lambda_2}$ and $\lambda_2=\norm{n}^2$.
+\\
+$$\implies\vec{F}=\frac{ce^2\vec{n}-\vec{u}}{\norm{n}^2}$$
+Substituting values of $\vec{F_1}$, $\vec{F_2}$, $\vec{n}$, and $\vec{u}$ and simplifying reduces the above equation to
+\begin{align}
+\pm ce^2=6
+\end{align}
+
+Consider another equation $$c=\frac{e\vec{u}^\top\vec{n}\pm\sqrt{e^2\brak{\vec{u}^\top\vec{n}}^2-\lambda_2\brak{e^2-1}\brak{\norm{\vec{u}}^2-\lambda_2f}}}{\lambda_2e\brak{e^2-1}}$$
+Substituting known values gives
+\begin{align}
+c=\pm\frac{1}{e}\sqrt{\frac{|f|}{|e^2-1|}}
+\end{align}
+
+We have 3 equations and 3 variables ($c$, $f$, $e$).
+\\ \\
+Upon solving, we get $e=\frac{3}{4}$, $c=\pm\frac{32}{3}$, and $|f|=28$
+\\
+However, $f$ can only have one value (either $+28$ or $-28$).
+\\
+To find this, assume some point $\brak{0,\alpha}$ to lie on the major axis of the conic. Substituting this point in the general conic equation $g(\vec{x})=0$ along with values of $\vec{V}$ and $\vec{u}$ gives $$\frac{7\alpha^2}{16}+f=0$$
+This implies that $f$ must be negative, and therefore $f=-28$.
+\\ \\
+The equation of the conic thus becomes $$g(\vec{x}) = \vec{x}^\top\myvec{1&0\\0&\frac{7}{16}}\vec{x}-28$$
+
+\end{document}
