@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{import}\PYG{+w}{ }\PYG{n}{numpy}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{np}
+
+\PYG{n}{def}\PYG{+w}{ }\PYG{n}{rref}\PYG{p}{(}\PYG{n}{A}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{    }\PYG{n}{A}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{A}\PYG{p}{.}\PYG{n}{astype}\PYG{p}{(}\PYG{k+kt}{float}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n}{rows}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{cols}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{A}\PYG{p}{.}\PYG{n}{shape}
+\PYG{+w}{    }\PYG{n}{r}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}
+
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{c}\PYG{+w}{ }\PYG{n}{in}\PYG{+w}{ }\PYG{n}{range}\PYG{p}{(}\PYG{n}{cols}\PYG{p}{)}\PYG{o}{:}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{r}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{n}{rows}\PYG{o}{:}
+\PYG{+w}{            }\PYG{k}{break}
+
+\PYG{+w}{        }\PYG{n}{max\PYGZus{}row}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{np}\PYG{p}{.}\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{np}\PYG{p}{.}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{A}\PYG{p}{[}\PYG{n}{r}\PYG{o}{:}\PYG{n}{rows}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{c}\PYG{p}{]))}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{r}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{A}\PYG{p}{[}\PYG{n}{max\PYGZus{}row}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{c}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{:}
+\PYG{+w}{            }\PYG{k}{continue}
+
+\PYG{+w}{        }\PYG{n}{A}\PYG{p}{[[}\PYG{n}{r}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{max\PYGZus{}row}\PYG{p}{]]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{A}\PYG{p}{[[}\PYG{n}{max\PYGZus{}row}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{]]}
+
+\PYG{+w}{        }\PYG{n}{A}\PYG{p}{[}\PYG{n}{r}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{A}\PYG{p}{[}\PYG{n}{r}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{A}\PYG{p}{[}\PYG{n}{r}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{c}\PYG{p}{]}
+
+\end{Verbatim}

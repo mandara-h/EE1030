@@ -1,0 +1,17 @@
+\frametitle{Python Code to find RREF of a 3x3 matrix}
+\begin{minted}[bgcolor=bg, linenos, fontsize=\small, breaklines]{c}
+        for i in range(rows):
+            if i != r:
+                A[i] -= A[i, c] * A[r]
+
+        r += 1
+
+    return A
+
+A = np.array([[-2, 3, 5],
+              [1, 2, 3],
+              [7, 0, -1]])
+
+rref_mat = rref(A)
+print(rref_mat)
+\end{minted}
