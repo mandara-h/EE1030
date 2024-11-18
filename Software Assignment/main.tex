@@ -85,7 +85,7 @@ The characteristic polynomial $|A-\lambda I| = 0$ can be solved for $\lambda$. H
 \textbf{Some Disadvantages:}
 \begin{enumerate}
 \item Computing the determinant and solving the polynomial becomes impractical for larger matrices.
-\item This method does not make sure of any explicit property that a matrix might have (such as sparsity, symmetry, etc.).
+\item This method does not make use of any explicit property that a matrix might have (such as sparsity, symmetry, etc.).
 \item The calculated eigenvalues for larger matrices may have significant errors due to approximations and/or truncations that might have been made during computation. 
 \end{enumerate}
 
@@ -204,5 +204,12 @@ For this assignment, I have chosen to implement the QR algorithm for calculating
 My code stores the matrix as a nested list of the matrix's rows and performs matrix operations accordingly. \\
 While matrix operations can be performed more conveniently on NumPy arrays, I have chosen to use nested lists so that I can better portray my level of understanding of the way the algorithm works. \\
 I have used the Gram-Schmidt algorithm to reduce the matrix input $A$ into the required $Q$ and $R$ components.
+
+\section*{More Information Regarding The QR Algorithm}
+\begin{enumerate}
+	\item \textbf{Time Complexity:} is of the order $O(kn^3)$, where $n$ represents the order of the matrix and $k$ represents the number of iterations in the computation. In my code, I have allowed for a maximum of 100 iterations, hence the maximum time complexity of my code will be $O(100n^3)$.
+	\item \textbf{Memory Usage:} Memory is required to store 3 matrices ($A$, $Q$, $R$) throughout the execution of the code, and 1-dimensional lists dynamically (row, $v$). This is in the order $O(n^2)$, where $n$ represents the order of the matrix $A$.
+	\item \textbf{Convergence Rate:} is inversely dependent on the ratio of the eigenvalues. The closer the magnitudes of the eigenvalues the slower the convergence rate, as many iterations will be required for convergence.
+\end{enumerate}
 
 \end{document}
