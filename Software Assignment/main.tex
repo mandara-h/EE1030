@@ -200,7 +200,8 @@ Use the eigenvalues of the sub-matrices to find the eigenvalue of the matrix.
 \newpage
 
 \section*{Algorithm Implemented}
-For this assignment, I have chosen to implement the QR algorithm for calculating the eigenvalues of a given matrix. My code stores the matrix as a nested list of the matrix's rows and performs matrix operations accordingly. \\
+For this assignment, I have chosen to implement the QR algorithm for calculating the eigenvalues of a given matrix. I have selected the QR algorithm as it applies to the widest range of matrices (symmetric, non-symmetric, sparse, dense, real entries, complex entries, etc.). However, my code is made to handle every kind of matrix except those with complex entries, for demonstrative purposes. The size of the matrix and its elements (real-valued) can be set, and the computation will proceed. \\
+My code stores the matrix as a nested list of the matrix's rows and performs matrix operations accordingly. \\
 While matrix operations can be performed more conveniently on NumPy arrays, I have chosen to use nested lists so that I can better portray my level of understanding of the way the algorithm works. \\
 I have used the Gram-Schmidt algorithm to reduce the matrix input $A$ into the required $Q$ and $R$ components.
 
