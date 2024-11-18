@@ -1,0 +1,207 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+%\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+%\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Software Assignment}
+\author{EE24BTECH11040 - Mandara Hosur}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+This report aims to detail a few popular algorithms used to find the eigenvalues of square matrices. 
+Below is a list of the algorithms that have been outlined in the report:
+\begin{enumerate}
+\item The Characteristic Polynomial Method
+\item The Power Iteration Algorithm
+\item The Inverse Iteration Algorithm
+\item The Jacobi Method
+\item The QR Algorithm
+\item The Divide And Conquer Algorithm
+\end{enumerate}
+
+\section{The Characteristic Polynomial Method}
+\textbf{Algorithm Outline:}
+\\
+The characteristic polynomial $|A-\lambda I| = 0$ can be solved for $\lambda$. Here $A$ denotes the given matrix, $I$ denotes the identity matrix, and $\lambda$ denotes the eigenvalue.
+\\ \\
+\textbf{Some Advantages:}
+\begin{enumerate}
+\item Solving a quadratic equation (for $2x2$ matrices) or a cubic equation (for $3x3$ matrices) is straightforward.
+\item It works for any type of matrix.
+\item Yields highly accurate results for smaller matrices.
+\end{enumerate}
+\textbf{Some Disadvantages:}
+\begin{enumerate}
+\item Computing the determinant and solving the polynomial becomes impractical for larger matrices.
+\item This method does not make sure of any explicit property that a matrix might have (such as sparsity, symmetry, etc.).
+\item The calculated eigenvalues for larger matrices may have significant errors due to approximations and/or truncations that might have been made during computation. 
+\end{enumerate}
+
+\section{The Power Iteration Algorithm}
+\textbf{Algorithm Outline:}
+\\
+An arbitrary non-zero vector (of appropriate dimensions) is chosen and is recursively pre-multiplied by the given matrix until the multiplication process yields the same vector (say $\vec{V}$). \\
+The largest element (in magnitude) in $\vec{V}$ represents the largest eigenvalue of the given matrix. \\ 
+\\
+\textbf{Some Advantages:}
+\begin{enumerate}
+\item Easy to implement.
+\item Highly efficient for sparse matrices (with many zero entries).
+\item Can be implemented conveniently for large matrices as well.
+\end{enumerate}
+\textbf{Some Disadvantages:}
+\begin{enumerate}
+\item May be slow to execute to completion when the second-largest eigenvalue is not far from the largest.
+\item Does not calculate all eigenvalues; only the largest one.
+\item The quality of convergence and precision of the eigenvalue calculated depend heavily on the choice of the initial arbitrary vector.
+\end{enumerate}
+
+\section{The Inverse Iteration Algorithm}
+\textbf{Algorithm Outline:}
+\\
+This algorithm is an extension of the power iteration algorithm and can be used to find all eigenvalues of a given matrix. \\
+Let $A$ be the given matrix, $\lambda$ be an eigenvalue, and $\vec{v}$ be an eigenvector. Then, by definition, we have
+\begin{align*}
+A\vec{v} = \lambda\vec{v} \\
+\implies A\vec{v} - \alpha I\vec{v} = \lambda\vec{v} - \alpha\vec{v} \\
+\text{for some real constant } \alpha \\
+\implies (A - \alpha I)\vec{v} = (\lambda - \alpha)\vec{v} \\
+\text{Pre-multiplying with } (A - \alpha I)^{-1} \text{ gives} \\
+\vec{v} = (A - \alpha I)^{-1} (\lambda - \alpha)\vec{v} \\
+\frac{1}{(\lambda - \alpha)} \vec{v} = (A - \alpha I)^{-1} \vec{v}
+\end{align*}
+The closer the chosen value of $\alpha$ is to a particular eigenvalue of the matrix $A$, the more scaled $\frac{1}{(\lambda - \alpha)}$ becomes, making this, the largest eigenvalue of the new matrix equation. \\
+This can be done repeatedly for each eigenvalue by appropriately varying the value of $\alpha$.
+\\ \\
+\textbf{Some Advantages:}
+\begin{enumerate}
+\item Highly effective method to use if the approximate value of one or more eigenvalues is known.
+\item This works for both symmetric and non-symmetric matrices.
+\item If the initial guess for $\alpha$ is close to the actual eigenvalue, the method converges rapidly.
+\end{enumerate}
+\textbf{Some Disadvantages:}
+\begin{enumerate}
+\item Requires inversion of a matrix, which is computationally expensive.
+\item This method relies heavily on the choice of $\alpha$. A poor choice will lead to slow convergence. 
+\item If the matrix $(A - \alpha I)$ is nearly singular, it may cause numerical issues.
+\item This method is ineffective if the eigenvalues of the matrix are closely spaced. 
+\end{enumerate}
+
+\section{The Jacobi Method}
+\textbf{Algorithm Outline:}
+\\
+This algorithm is used on symmetric matrices, by executing a spectral decomposition. \\
+This means that we iteratively perform orthogonal transformations (rotation operations) on the initial matrix $A$ until we get $$A = VDV^\top$$ where $V$ is a matrix containing all the eigenvectors, and $D$ is a diagonal matrix where each diagonal element represents an eigenvalue.
+\\ \\
+\textbf{Some Advantages:}
+\begin{enumerate}
+\item For smaller matrices, the Jacobi method yields highly accurate results. 
+\item This method is guaranteed to converge, as long as the matrix $A$ is symmetric.
+\item Works well for dense matrices.
+\end{enumerate}
+\textbf{Some Disadvantages:}
+\begin{enumerate}
+\item This method is inefficient for larger matrices, due to the high cost of computation.
+\item This method does not apply to non-symmetric matrices.
+\item Rate of convergence is slow.
+\end{enumerate}
+
+\section{The QR Algorithm}
+\textbf{Algorithm Outline:}
+\\
+This algorithm involves decomposing the initial matrix $A$ as $$A=QR$$ where $Q$ is an orthogonal matrix, and $R$ is an upper triangular matrix. \\
+Updating $A$ as $$A=RQ$$ gives a triangular matrix with eigenvalues as the diagonal elements.
+\\ \\
+\textbf{Some Advantages:}
+\begin{enumerate}
+\item Applies to any type of matrix.
+\item Can yield both real and complex eigenvalues.
+\item Computes all eigenvalues of a given matrix $A$.
+\end{enumerate}
+\textbf{Some Disadvantages:}
+\begin{enumerate}
+\item Is computationally expensive for large matrices.
+\item Rate of convergence can be slow.
+\item The algorithm involves operations on the entire matrix, and leads to high memory consumption for larger matrices.
+\end{enumerate}
+
+\section{The Divide And Conquer Algorithm}
+\textbf{Algorithm Outline:}
+\\
+The given matrix $A$ is first reduced to a tridiagonal matrix $T$ by using orthogonal transformations. Choose a pivot point and break the matrix $T$ into sub-matrices. \\
+Recursively execute the above-mentioned steps until the sub-matrices obtained are small enough to calculate eigenvalues for, and find their eigenvalues. \\
+Use the eigenvalues of the sub-matrices to find the eigenvalue of the matrix.
+\\ \\
+\textbf{Some Advantages:}
+\begin{enumerate}
+\item This method is highly efficient due to its nature of dividing a huge matrix into smaller, more manageable matrices.
+\item Yields results with satisfactory accuracy.
+\end{enumerate}
+\textbf{Some Disadvantages:}
+\begin{enumerate}
+\item Only applies to symmetric matrices.
+\item The algorithm is complex to implement.
+\item Less efficient for small matrices.
+\item Requires additional memory to store intermediate results.
+\end{enumerate}
+
+\newpage
+
+\section*{Algorithm Implemented}
+For this assignment, I have chosen to implement the QR algorithm for calculating the eigenvalues of a given matrix. My code stores the matrix as a nested list of the matrix's rows and performs matrix operations accordingly. \\
+While matrix operations can be performed more conveniently on NumPy arrays, I have chosen to use nested lists so that I can better portray my level of understanding of the way the algorithm works. \\
+I have used the Gram-Schmidt algorithm to reduce the matrix input $A$ into the required $Q$ and $R$ components.
+
+\end{document}
