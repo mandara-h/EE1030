@@ -78,26 +78,26 @@ g(\vec{x}) = \vec{x}^\top\vec{V}\vec{x}+2\vec{u}^\top\vec{x}+f \label{eq1}
 \vec{u} =\frac{\vec{F_1}+\vec{F_2}}{2}=\myvec{0\\0} \text{ and } \vec{n}\equiv\vec{F_1}-\vec{F_2}\equiv\myvec{0\\1} \label{eq2}
 \end{align}
 \\
-From \eqref{eq2}, we can conclude that we have a standard conic, with its center at the origin, foci on a coordinate axis (y-axis), and directrices parallel to a coordinate axis (x-axis).
+From \ref{eq2}, we can conclude that we have a standard conic, with its center at the origin, foci on a coordinate axis (y-axis), and directrices parallel to a coordinate axis (x-axis).
 \\
 Therefore conic equation is either 
 \begin{align}
 \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \text{ or } \frac{x^2}{a^2} - \frac{y^2}{b^2} = -1 \label{eq3}
 \end{align}
 \\
-Given that $e \brak{=\sqrt{1\pm\frac{a^2}{b^2}}}$ represents the eccentricity of the conic, comparing \eqref{eq3} and \eqref{eq1} gives the relation
+Given that $e \brak{=\sqrt{1\pm\frac{a^2}{b^2}}}$ represents the eccentricity of the conic, comparing \ref{eq3} and \ref{eq1} gives the relation
 \begin{align}
 \vec{V} = \myvec{1&0\\0&1-e^2}
 \end{align}
 \\
-We know that the major axis is the y-axis. Assume some point $\myvec{0\\k}$ on the y-axis that satisfies \eqref{eq1}. This gives
+We know that the major axis is the y-axis. Assume some point $\myvec{0\\k}$ on the y-axis that satisfies \ref{eq1}. This gives
 \begin{align}
 k = \sqrt{\frac{|f|}{|1-e^2|}}
 \\
 \implies 2k = 16 = 2\sqrt{\frac{|f|}{|1-e^2|}} \label{eq6}
 \end{align}
 \\
-Rearranging \eqref{eq6} gives 
+Rearranging \ref{eq6} gives 
 \begin{align}
 8\sqrt{|1-e^2|}=\sqrt{|f|} \label{eq7}
 \end{align}
@@ -107,7 +107,7 @@ Now, $\vec{F}=\frac{ce^2\vec{n}-\vec{u}}{\lambda_2}$ and $\lambda_2=\norm{n}^2$.
 \begin{align}
 \implies\vec{F}=\frac{ce^2\vec{n}-\vec{u}}{\norm{n}^2} \label{eq8}
 \end{align}
-Substituting values of $\vec{F_1}$, $\vec{F_2}$, $\vec{n}$, and $\vec{u}$ and simplifying reduces \eqref{eq8} to
+Substituting values of $\vec{F_1}$, $\vec{F_2}$, $\vec{n}$, and $\vec{u}$ and simplifying reduces \ref{eq8} to
 \begin{align}
 \pm ce^2=6 \label{eq9}
 \end{align}
@@ -118,25 +118,30 @@ Substituting known values gives
 c=\pm\frac{1}{e}\sqrt{\frac{|f|}{|e^2-1|}} \label{eq10}
 \end{align}
 
-We have 3 equations (\eqref{eq7}, \eqref{eq9}, \eqref{eq10}) and 3 variables ($c$, $f$, $e$).
+We have 3 equations (\ref{eq7}, \ref{eq9}, \ref{eq10}) and 3 variables ($c$, $f$, $e$).
 \\ \\
 Upon solving, we get $e=\frac{3}{4}$, $c=\pm\frac{32}{3}$, and $|f|=28$
 \\
 However, $f$ can only have one value (either $+28$ or $-28$).
 \\
-To find this, assume some point $\brak{0,\alpha}$ to lie on the major axis of the conic. Substituting this point in the general conic equation \eqref{eq1} along with values of $\vec{V}$ and $\vec{u}$ gives $$\frac{7\alpha^2}{16}+f=0$$
+To find this, assume some point $\brak{0,\alpha}$ to lie on the major axis of the conic. Substituting this point in the general conic equation \ref{eq1} along with values of $\vec{V}$ and $\vec{u}$ gives $$\frac{7\alpha^2}{16}+f=0$$
 This implies that $f$ must be negative, and therefore $f=-28$.
 \\ \\
-The equation of the conic thus becomes $$g(\vec{x}) = \vec{x}^\top\myvec{1&0\\0&\frac{7}{16}}\vec{x}-28$$
-
+The equation of the conic thus becomes 
+\begin{align}
+g(\vec{x}) = \vec{x}^\top\myvec{1&0\\0&\frac{7}{16}}\vec{x}-28 \label{eq11}
+\end{align}
+\\
+Note that since $e<1$, \eqref{eq11} represents the equation of an ellipse (verified by plot below).
+\\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\columnwidth]{figs/fig.png}
 	\caption{Plot of conic}
-	\label{fig}
+	\label{fig:fig}
 \end{figure}
-
-Code for Figure \eqref{fig} can be found at:
+\\
+Code for Figure \ref{fig} can be found at:
 \begin{lstlisting}
 codes/code.py
 \end{lstlisting}
