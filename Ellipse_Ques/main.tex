@@ -78,14 +78,13 @@ g(\vec{x}) = \vec{x}^\top\vec{V}\vec{x}+2\vec{u}^\top\vec{x}+f \label{eq1}
 \vec{u} =\frac{\vec{F_1}+\vec{F_2}}{2}=\myvec{0\\0} \text{ and } \vec{n}\equiv\vec{F_1}-\vec{F_2}\equiv\myvec{0\\1} \label{eq2}
 \end{align}
 \\
-From \ref{eq2}, we can conclude that we have a standard conic, with its center at the origin, foci on a coordinate axis (y-axis), and directrices parallel to a coordinate axis (x-axis).
-\\
-Therefore conic equation is either 
+From
 \begin{align}
-\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \text{ or } \frac{x^2}{a^2} - \frac{y^2}{b^2} = -1 \label{eq3}
+\vec{V} = \norm{\vec{n}}^2\vec{I} - e^2\vec{n}\vec{n}^{\top}
 \end{align}
 \\
-Given that $e \brak{=\sqrt{1\pm\frac{a^2}{b^2}}}$ represents the eccentricity of the conic, comparing \ref{eq3} and \ref{eq1} gives the relation
+\text{we get}
+\\
 \begin{align}
 \vec{V} = \myvec{1&0\\0&1-e^2}
 \end{align}
@@ -141,7 +140,7 @@ Note that since $e<1$, \eqref{eq11} represents the equation of an ellipse (verif
 	\label{fig:fig}
 \end{figure}
 \\
-Code for Figure \ref{fig} can be found at:
+Code for Figure \eqref{fig} can be found at:
 \begin{lstlisting}
 codes/code.py
 \end{lstlisting}
