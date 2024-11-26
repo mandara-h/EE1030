@@ -67,29 +67,29 @@ Given that the length of the major axis of a conic is 16 units and the coordinat
   \caption{Given Information}
   \label{Table 1}
 \end{table} \\
-2 foci exist for this conic. Therefore, it must be an ellipse or a hyperbola.
+Two foci exist for this conic. Therefore, it must be an ellipse or a hyperbola.
 \\
-The general equation of a conic with directrix $\vec{n}^\top\vec{x}=c$ can be written as 
+The general equation of a conic with directrix $\vec{n}^\top\vec{x}=c$ can be written as,  
 \begin{align}
-g(\vec{x}) = \vec{x}^\top\vec{V}\vec{x}+2\vec{u}^\top\vec{x}+f \label{eq1}
+g(\vec{x}) &= \vec{x}^\top\vec{V}\vec{x}+2\vec{u}^\top\vec{x}+f \label{eq1}
 \end{align}
 \\
 \begin{align}
-\vec{u} =\frac{\vec{F_1}+\vec{F_2}}{2}=\myvec{0\\0} \text{ and } \vec{n}\equiv\vec{F_1}-\vec{F_2}\equiv\myvec{0\\1} \label{eq2}
+\vec{u} &=\frac{\vec{F_1}+\vec{F_2}}{2}=\myvec{0\\0} \\  \vec{n} &\equiv\vec{F_1}-\vec{F_2}\equiv\myvec{0\\1} \label{eq2}
 \end{align}
 \\
 From
 \begin{align}
-\vec{V} = \norm{\vec{n}}^2\vec{I} - e^2\vec{n}\vec{n}^{\top}
+\vec{V} &= \norm{\vec{n}}^2\vec{I} - e^2\vec{n}\vec{n}^{\top}
 \end{align}
 \\
 \text{we get}
 \\
 \begin{align}
-\vec{V} = \myvec{1&0\\0&1-e^2}
+\vec{V} &= \myvec{1&0\\0&1-e^2}
 \end{align}
 \\
-We know that the major axis is the y-axis. Assume some point $\myvec{0\\k}$ on the y-axis that satisfies \ref{eq1}. This gives
+We know that the $Y$ - axis is the major axis. The points $\myvec{0\\k}$ and $\myvec{0\\-k}$ on the $Y$ - axis satisfy \ref{eq1} as they are vertices of the ellipse. Upon substitution we get,
 \begin{align}
 k = \sqrt{\frac{|f|}{|1-e^2|}}
 \\
@@ -101,48 +101,52 @@ Rearranging \ref{eq6} gives
 8\sqrt{|1-e^2|}=\sqrt{|f|} \label{eq7}
 \end{align}
 
-Now, $\vec{F}=\frac{ce^2\vec{n}-\vec{u}}{\lambda_2}$ and $\lambda_2=\norm{n}^2$.
-\\
+Now, 
 \begin{align}
-\implies\vec{F}=\frac{ce^2\vec{n}-\vec{u}}{\norm{n}^2} \label{eq8}
+	\vec{F}&=\frac{ce^2\vec{n}-\vec{u}}{\lambda_2}\\ \lambda_2&=\norm{n}^2\\
+\implies\vec{F}&=\frac{ce^2\vec{n}-\vec{u}}{\norm{n}^2} \label{eq8}
 \end{align}
-Substituting values of $\vec{F_1}$, $\vec{F_2}$, $\vec{n}$, and $\vec{u}$ and simplifying reduces \ref{eq8} to
+Substituting values of $\vec{F_1}$, $\vec{F_2}$, $\vec{n}$, and $\vec{u}$ and simplifying \ref{eq8}, we get
 \begin{align}
-\pm ce^2=6 \label{eq9}
-\end{align}
-
-Consider another equation $$c=\frac{e\vec{u}^\top\vec{n}\pm\sqrt{e^2\brak{\vec{u}^\top\vec{n}}^2-\lambda_2\brak{e^2-1}\brak{\norm{\vec{u}}^2-\lambda_2f}}}{\lambda_2e\brak{e^2-1}}$$
-Substituting known values gives
-\begin{align}
-c=\pm\frac{1}{e}\sqrt{\frac{|f|}{|e^2-1|}} \label{eq10}
+ ce^2&= \pm6 \label{eq9}
 \end{align}
 
-We have 3 equations (\ref{eq7}, \ref{eq9}, \ref{eq10}) and 3 variables ($c$, $f$, $e$).
-\\ \\
+Using the below equation, 
+\begin{align}
+	c&=\frac{e\vec{u}^\top\vec{n}\pm\sqrt{e^2\brak{\vec{u}^\top\vec{n}}^2-\lambda_2\brak{e^2-1}\brak{\norm{\vec{u}}^2-\lambda_2f}}}{\lambda_2e\brak{e^2-1}} \label{eq13}
+\end{align} 
+Substituting known values in \eqref{eq13} gives
+\begin{align}
+c&=\pm\frac{1}{e}\sqrt{\frac{|f|}{|e^2-1|}} \label{eq10}
+\end{align}
+
+We have 3 equations \ref{eq7}, \ref{eq9}, \ref{eq10} and 3 variables ($c$, $f$, $e$).
+\\ 
 Upon solving, we get $e=\frac{3}{4}$, $c=\pm\frac{32}{3}$, and $|f|=28$
 \\
-However, $f$ can only have one value (either $+28$ or $-28$).
-\\
-To find this, assume some point $\brak{0,\alpha}$ to lie on the major axis of the conic. Substituting this point in the general conic equation \ref{eq1} along with values of $\vec{V}$ and $\vec{u}$ gives $$\frac{7\alpha^2}{16}+f=0$$
-This implies that $f$ must be negative, and therefore $f=-28$.
-\\ \\
-The equation of the conic thus becomes 
+Using the derived values, we find that,
 \begin{align}
-g(\vec{x}) = \vec{x}^\top\myvec{1&0\\0&\frac{7}{16}}\vec{x}-28 \label{eq11}
+	\vec{V} &= \myvec{1&0\\0&\frac{7}{16}}
 \end{align}
-\\
-Note that since $e<1$, \eqref{eq11} represents the equation of an ellipse (verified by plot below).
+Since $e < 1$, the conic is an ellipse, and since the ellipse is already in standard form, $f$ must be negative. Thus,
+\begin{align}
+	f&=-28
+\end{align}
+\\ \\
+Thus the equation of the conic becomes,  
+\begin{align}
+g(\vec{x}) &= \vec{x}^\top\myvec{1&0\\0&\frac{7}{16}}\vec{x}-28 \label{eq11}
+\end{align}
 \\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\columnwidth]{figs/fig.png}
 	\caption{Plot of conic}
-	\label{fig:fig}
+	\label{fig}
 \end{figure}
 \\
 Code for Figure \eqref{fig} can be found at:
 \begin{lstlisting}
 codes/code.py
 \end{lstlisting}
-
 \end{document}
