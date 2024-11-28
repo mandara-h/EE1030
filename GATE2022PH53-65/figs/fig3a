@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+    \draw[->] (0,0) -- (5.5,0) node[below] {$\theta_1$};
+    \draw[->] (0,0) -- (0,4.5) node[left] {$\theta_2$};
+
+    \foreach \x in {1,2,3,4} {
+        \draw[gray, very thin] (\x,0) -- (\x,4);
+    }
+    \foreach \y in {1,2,3,4} {
+        \draw[gray, very thin] (0,\y) -- (4,\y);
+    }
+
+    \node[below] at (0,0) {$0$};
+    \node[below] at (1,0) {$\pi/2$};
+    \node[below] at (2,0) {$\pi$};
+    \node[below] at (3,0) {$3\pi/2$};
+    \node[below] at (4,0) {$2\pi$};
+    \node[left] at (0,1) {$\pi/2$};
+    \node[left] at (0,2) {$\pi$};
+    \node[left] at (0,3) {$3\pi/2$};
+    \node[left] at (0,4) {$2\pi$};
+
+    \draw[->] (0,0) -- (4,1);
+    \draw[->] (0,1) -- (4,2);
+    \draw[->] (0,2) -- (4,3);
+    \draw[->] (0,3) -- (4,4);
+\end{tikzpicture}

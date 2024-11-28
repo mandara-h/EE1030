@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+    \draw[dashed] (-2,0) -- (2,0) node[left] {$E_F$};
+    \node at (-2,-0.25) {Metal};
+    \node at (3,-0.25) {$n$-type semiconductor};
+    \draw[thick] (0,0) -- ++(0,1) node[right] {Conduction Band};
+    \draw[thick] (0,0) -- ++(0,-1) node[right] {Valence Band};
+    \draw[thick] (0,0.25) to[bend left=30] (1,0.75);
+    \draw[thick] (0,-0.75) to[bend left=30] (1,-0.25);
+\end{tikzpicture}

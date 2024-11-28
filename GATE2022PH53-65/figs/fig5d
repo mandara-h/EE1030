@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[right] {$V$};
+    \draw[->] (0,-2) -- (0,3) node[above] {$I$};
+    \draw (-2.5,0) -- (-1.5,0) node[above] {$-V_0$};
+    \draw[thick] (-2,-1) --  (0,0) to[bend right] (2,2.5);
+\end{tikzpicture}

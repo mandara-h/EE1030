@@ -1,0 +1,155 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE (2022) PH(53-65)}
+\author{EE24BTECH11040 - Mandara Hosur}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\textbf{Carry TWO marks Each}}
+
+\begin{enumerate}
+
+\item A parallel plate capacitor with spacing $d$ and area of cross-section $A$ is connected to a source of voltage $V$. If the plates are pulled apart quasistatically to a spacing
+of 2$d$, then which of the following statements are correct? 
+
+\begin{enumerate}
+\item The force between the plates at spacing $2d$ is $\frac{1}{8}\brak{\frac{\epsilon_0AV^2}{d^2}}$
+\item The work done in moving the plates is $\frac{1}{8}\brak{\frac{\epsilon_0AV^2}{d}}$
+\item The energy transferred to the voltage source is $\frac{1}{2}\brak{\frac{\epsilon_0AV^2}{d}}$
+\item The energy of the capacitor reduces by $\frac{1}{4}\brak{\frac{\epsilon_0AV^2}{d}}$
+\end{enumerate}
+
+\item A system with time independent Hamiltonian $H(q,p)$ has two constants of motion $f(q,p)$ and $g(q,p)$. Then which of the following Poisson brackets are always zero?
+
+\begin{enumerate}
+\item $\cbrak{H,f+g}$
+\item $\cbrak{H,{f,g}}$
+\item $\cbrak{H+f,g}$
+\item $\cbrak{H,H+fg}$
+\end{enumerate}
+
+\item In the action-angle variables $(I_1,I_2,\theta_1,\theta_2)$, consider the Hamiltonian $H=4I_1I_2$ and $0\leq\theta_1,\theta_2<2\pi$. Let $\frac{I_1}{I_2}=\frac{1}{2}$. Which of the following are possible plots of the trajectories with different initial conditions in $\theta_1-\theta_2$ plane?
+
+\begin{enumerate}
+\item \input{figs/fig3a}
+\item \input{figs/fig3b}
+\item \input{figs/fig3c}
+\item \input{figs/fig3d}
+\end{enumerate}
+
+\item A particle of mass m in the $x-y$ plane is confined in an infinite two-dimensional well with vertices at $(0,0)$, $(0,L)$, $(L,L)$, $(L,0)$. The eigenfunctions of this particle are $\psi_{n_x,n_y} = \frac{2}{L}\sin{\brak{\frac{n_x\pi x}{L}}}\sin{\brak{\frac{n_y\pi y}{L}}}$. If perturbation of the form $V=Cxy$, where $C$ is a real constant, is applied, then which of the following statements are correct for the first excited state?
+
+\begin{enumerate}
+\item The unperturbed energy is $\frac{3\pi^2h^2}{2mL^2}$
+\item The unperturbed energy is $\frac{5\pi^2h^2}{2mL^2}$
+\item First order energy shift due to the applied perturbation is zero
+\item The shift $(\delta)$ in energy due to the applied perturbation is determined by an equation of the form $\begin{vmatrix}
+a-\delta & b \\
+b & a-\delta
+\end{vmatrix}$
+$=0$, where $a$ and $b$ are real, non-zero constants
+\end{enumerate}
+
+\item A junction is formed between a metal on the left and an $n$-type semiconductor on the right. Before forming the junction, the Fermi level $E_F$ of the metal lies below that of the semiconductor. Then which of the following schematics are correct for the bands and the $I-V$ characteristics of the junction?
+
+\begin{enumerate}
+\item \input{figs/fig5a}
+\item \input{figs/fig5b}
+\item \input{figs/fig5c}
+\item \input{figs/fig5d}
+\end{enumerate}
+
+\item A plane polarized electromagnetic wave propagating in $y-z$ plane is incident at the interface of two media at Brewster's angle. Taking $z=0$ as the boundary between the two media, the electric field of the reflected wave is given by
+$$\vec{E_R} = A_R \cos{\sbrak{k_0\cbrak{\frac{\sqrt{3}}{2}y - \frac{1}{2}z}-\omega t}}\hat{x}$$
+then which among the following statements are correct?
+
+\begin{enumerate}
+\item The angle of refraction is $\frac{\pi}{6}$
+\item Ratio of permittivity of the medium of refraction ($\epsilon_2$) with respect to the medium on incidence ($\epsilon_1$), $\frac{\epsilon_2}{\epsilon_1}=3$
+\item The incident wave can have components of its electric field in $y-z$ plane
+\item The angle of reflection is $\frac{\pi}{6}$
+\end{enumerate}
+
+\item The minimum number of two-input NAND gates required to implement the following Boolean expression is \_
+$$Y = \sbrak{A\bar{B} \brak{C + BD} + \bar{A}\bar{B}}C$$
+
+\item In a nucleus, the interaction $V_{so}\vec{l}\cdot\vec{s}$ is responsible for creating spin-orbit doublets. The energy difference between $p_{\frac{1}{2}}$ and $p_{\frac{3}{2}}$ states in units of $V_{so}\frac{h^2}{2}$ is \_ (round off to the nearest integer)
+
+\item Two identical particles of rest mass $m_0$ approach each other with equal and opposite velocity $v=0.5c$, where $c$ is the speed of light. The total energy of one particle as measured in the rest frame of the other is $E=\alpha m_0c^2$. The value of $\alpha$ is \_ (Round off to two decimal places)
+
+\item In an X-Ray diffraction experiment on a solid with FCC structure, five diffraction peaks corresponding to (111), (200), (220), (311) and (222) planes are observed using 1.54\,\AA X-rays. On using 3\,\AA X-rays on the same solid, the number of observed peaks will be \_
+
+\item For 1 mole of Nitrogen gas, the ratio $\brak{\frac{\Delta S_I}{\Delta S_{II}}}$ of entropy change of the gas in processes (I) and (II) mentioned below is \_ (Round off to one decimal place)
+\\
+(I) The gas is held at 1 atm and is cooled from 300 K to 77 K.
+\\
+(II) The gas is liquified at 77 K.
+\\
+(Take $C_p$ = 7.0 cal $\mathrm{mol}^{-1}$$\mathrm{K}^{-1}$, Latent heat $L$ = 1293.6 cal $\mathrm{mol}^{-1}$)
+
+\item Frequency bandwidth $\Delta v$ of a gas laser of frequency $\nu$ Hz is 
+$$\Delta v = \frac{2\nu}{c} \sqrt{\frac{\alpha}{A}}$$
+where $\alpha = 3.44 \times 10^6 \mathrm{m}^{2} \mathrm{s}^{-2}$ at room temperature and $A$ is the atomic mass of the lasing atom. For ${}^{4}He$ - ${}^{20}Ne$ laser (wavelength = 633 nm), $\Delta v = n \times 10^9$ Hz. The value of $n$ is \_ (Round off to one decimal place) 
+
+\item A current of 1 A is flowing through a very long solenoid made of winding density 3000 turns/m. As shown in the figure, a parallel plate capacitor, with plates oriented parallel to the solenoid axis and carrying surface charge density $6\epsilon_0C\mathrm{m}^{-2}$, is placed at the middle of the solenoid. The momentum density of the electromagnetic field at the midpoint X of the capacitor is $n \times 10^{13}$ N s $\mathrm{m}^{-3}$. The value of $n$ is \_ (Round off to the nearest integer). 
+\\ (speed of light $c = 3 \times 10^8 \mathrm{ms}^{-1}$)
+
+\input{figs/fig13}
+
+\end{enumerate}
+
+\end{document}
